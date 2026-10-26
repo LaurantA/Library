@@ -1,0 +1,21 @@
+/* Journal — layout classes. Colours, type and components come from classical.css. */
+.jr-page { padding: var(--space-6); max-width: 900px; }
+@media (max-width: 640px) { .jr-page { padding: var(--space-4); } }
+.jr-head { display: flex; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4); }
+.jr-stat { font-size: 13px; color: var(--color-neutral-700); }
+.jr-h3 { font-size: 22px; margin: var(--space-8) 0 var(--space-3) 0; padding-bottom: 4px; border-bottom: 1px solid var(--color-divider); }
+.jr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-4); }
+.jr-card .card-title a:hover { color: var(--color-accent-700); }
+.jr-entry { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: var(--space-4); padding: var(--space-4) 0; border-bottom: 1px solid var(--color-divider); }
+@media (max-width: 640px) { .jr-entry { grid-template-columns: 1fr; gap: var(--space-1); } }
+.jr-date { font-family: var(--font-heading); font-size: 16px; color: var(--color-accent-700); line-height: 1.3; }
+.jr-book { font-size: 15px; margin-bottom: var(--space-2); }
+.jr-pages { color: var(--color-neutral-700); font-size: 13px; }
+.jr-quote { margin: var(--space-3) 0; padding: var(--space-2) var(--space-4); border-left: 3px solid var(--color-accent); background: var(--color-surface); font-family: var(--font-heading); font-size: 19px; line-height: 1.45; font-style: italic; }
+.jr-qmeta { font-family: var(--font-body); font-style: normal; font-size: 12px; color: var(--color-neutral-700); margin-top: 4px; }
+.jr-qnote { font-family: var(--font-body); font-style: normal; font-size: 13px; margin-top: 4px; }
+.jr-qform { border-left: 3px solid var(--color-accent); padding-left: var(--space-3); }
+.jr-line { padding: 6px 0; border-bottom: 1px dotted var(--color-divider); font-size: 15px; }
+.jr-ld { display: inline-block; width: 70px; color: var(--color-accent-700); font-size: 13px; }
+.jr-reading { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; padding: 6px 0; border-bottom: 1px dotted var(--color-divider); font-size: 14px; }
+.jr-reading select.input, .jr-reading input.input { width: auto; padding: 4px 8px; }

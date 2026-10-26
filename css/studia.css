@@ -1,0 +1,42 @@
+/* Studia — layout classes. Colours, type and components come from classical.css. */
+.st-strip { padding-top: calc(var(--space-4) + 4px) !important; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-2); padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--color-divider); }
+@media (max-width: 1000px) { .st-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .st-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: var(--space-3) var(--space-4); } }
+.st-stage { border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-2) var(--space-3); cursor: pointer; background: transparent; text-align: left; color: inherit; font: inherit; position: relative; }
+.st-stage:hover { border-color: var(--color-accent); }
+.st-stage.is-on { border-color: var(--color-accent); background: var(--color-surface); box-shadow: var(--shadow-sm); }
+.st-stage.is-strand { border-style: dashed; }
+.st-stage .nm { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 19px; line-height: 1.15; }
+.st-stage .sb { font-size: 11px; color: var(--color-neutral-700); margin-top: 2px; }
+.st-stage .bar { height: 3px; background: var(--color-divider); border-radius: 2px; margin-top: var(--space-2); overflow: hidden; }
+.st-stage .bar > i { display: block; height: 100%; background: var(--color-accent); }
+.st-stage .here { position: absolute; top: -8px; left: 10px; padding: 0 5px; background: var(--color-bg); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); line-height: 15px; }
+.st-panel { padding: var(--space-6); max-width: 1100px; }
+@media (max-width: 560px) { .st-panel { padding: var(--space-4); } }
+.st-aim { max-width: 78ch; line-height: 1.65; margin: var(--space-2) 0; }
+.st-ex { font-size: 14px; color: var(--color-neutral-700); max-width: 78ch; }
+.st-item { display: grid; grid-template-columns: 34px minmax(0, 1fr) minmax(0, 260px); gap: var(--space-3); padding: var(--space-3) 0; border-top: 1px solid var(--color-divider); align-items: start; }
+@media (max-width: 760px) { .st-item { grid-template-columns: 34px minmax(0, 1fr); } .st-item .shelf { grid-column: 2; } }
+.st-status { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--color-accent); background: transparent; cursor: pointer; position: relative; padding: 0; margin-top: 2px; }
+.st-status.reading::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: linear-gradient(90deg, var(--color-accent) 50%, transparent 50%); }
+.st-status.read { background: var(--color-accent); }
+.st-status.read::after { content: "✓"; position: absolute; inset: 0; color: var(--color-bg); font-size: 15px; line-height: 26px; text-align: center; }
+.st-work { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 19px; line-height: 1.25; cursor: pointer; }
+.st-work:hover { color: var(--color-accent-700); }
+.st-meta { font-size: 12.5px; color: var(--color-neutral-700); margin-top: 3px; line-height: 1.5; }
+.st-lang { display: inline-block; font-size: 10.5px; letter-spacing: 0.06em; border: 1px solid var(--color-divider); border-radius: 3px; padding: 0 5px; margin-right: 6px; color: var(--color-neutral-700); }
+.st-add { display: inline-block; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-accent-700); border: 1px dashed var(--color-accent); border-radius: 3px; padding: 0 5px; margin-left: 6px; }
+.st-decision { font-size: 12.5px; color: var(--color-accent-700); margin-top: 3px; font-style: italic; }
+.st-shelf { font-size: 12.5px; }
+.st-shelf .lbl { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-700); }
+.st-shelf .bk { margin-top: 2px; line-height: 1.35; }
+.st-detail { grid-column: 2 / -1; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); margin-top: var(--space-2); display: grid; gap: var(--space-3); }
+.st-detail textarea.input { min-height: 90px; resize: vertical; font-family: var(--font-body); line-height: 1.5; }
+.st-log { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-4); }
+.st-entry { cursor: pointer; }
+.st-entry:hover { box-shadow: var(--shadow-md); }
+.st-entry .latin { font-family: var(--font-heading); font-size: 17px; line-height: 1.4; white-space: pre-wrap; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.st-thumbs { display: flex; gap: 6px; flex-wrap: wrap; }
+.st-thumbs > div { width: 64px; height: 48px; border: 1px solid var(--color-divider); border-radius: var(--radius-sm); overflow: hidden; background: var(--color-bg); }
+.st-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.st-method { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-4); }

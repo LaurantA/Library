@@ -1,0 +1,57 @@
+/* Cabinet — layout classes. Colours, type and components come from classical.css. */
+.cab-page { min-height: 100vh; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); padding-bottom: 72px; }
+.cab-section { padding: var(--space-6); }
+.cab-h2 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 32px; margin: 0; }
+.cab-sub { font-style: italic; color: var(--color-neutral-700); margin: var(--space-1) 0 var(--space-4) 0; max-width: 80ch; }
+.cab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--space-4); }
+.cab-card { cursor: pointer; padding: 0; overflow: hidden; gap: 0; }
+.cab-card:hover { box-shadow: var(--shadow-md); }
+.cab-thumb { aspect-ratio: 4 / 3; background: var(--color-surface); display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--color-divider); }
+.cab-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.cab-thumb-empty { font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-600); }
+.cab-card-text { padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-1); }
+.cab-kicker { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); }
+.cab-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 19px; line-height: 1.2; }
+.cab-maker { font-size: 13px; color: var(--color-neutral-700); }
+
+.cab-object { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--space-8); padding: var(--space-6); align-items: start; }
+@media (max-width: 860px) { .cab-object { grid-template-columns: 1fr; gap: var(--space-4); padding: var(--space-4); } .cab-section { padding: var(--space-4); } }
+.cab-stage { background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; min-height: 320px; max-height: 70vh; cursor: zoom-in; overflow: hidden; }
+.cab-stage img { max-width: 100%; max-height: 70vh; object-fit: contain; display: block; }
+.cab-strip { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-2); }
+.cab-strip-item { width: 76px; height: 58px; border: 1px solid var(--color-divider); border-radius: var(--radius-sm); overflow: hidden; cursor: pointer; background: var(--color-surface); position: relative; }
+.cab-strip-item img { width: 100%; height: 100%; object-fit: cover; }
+.cab-strip-item.is-on { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.cab-facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px var(--space-4); font-size: 14px; margin: var(--space-4) 0; }
+.cab-facts dt { color: var(--color-neutral-700); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 2px; }
+.cab-facts dd { margin: 0; }
+.cab-block-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-neutral-700); margin: var(--space-6) 0 var(--space-2) 0; }
+.cab-verbatim { background: var(--color-surface); border-left: 3px solid var(--color-accent); padding: var(--space-3) var(--space-4); font-size: 14px; white-space: pre-wrap; line-height: 1.6; }
+.cab-essay { max-width: 72ch; font-size: 15px; }
+
+.cab-plate { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-4); padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); cursor: pointer; }
+.cab-plate:hover .cab-title { color: var(--color-accent-700); }
+@media (max-width: 640px) { .cab-plate { grid-template-columns: 1fr; } }
+
+.cab-form { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.cab-form .full { grid-column: 1 / -1; }
+@media (max-width: 640px) { .cab-form { grid-template-columns: 1fr; } }
+.cab-form-section { grid-column: 1 / -1; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); border-bottom: 1px solid var(--color-divider); padding-bottom: 4px; margin-top: var(--space-3); }
+.cab-form textarea.input { min-height: 120px; resize: vertical; font-family: var(--font-body); line-height: 1.5; }
+.cab-img-edit { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.cab-img-tile { width: 112px; border: 1px solid var(--color-divider); border-radius: var(--radius-sm); overflow: hidden; background: var(--color-surface); font-size: 12px; }
+.cab-img-tile .pic { height: 84px; display: flex; align-items: center; justify-content: center; }
+.cab-img-tile .pic img { max-width: 100%; max-height: 100%; }
+.cab-img-tile .row { display: flex; justify-content: space-between; padding: 2px 4px; }
+.cab-img-tile button { background: none; border: 0; cursor: pointer; color: var(--color-accent-700); padding: 2px 4px; font-size: 13px; }
+.cab-img-tile button:disabled { opacity: 0.3; cursor: default; }
+
+.cab-lightbox { position: fixed; inset: 0; z-index: 2000; background: rgba(20, 17, 14, 0.94); display: flex; align-items: center; justify-content: center; }
+.cab-lightbox .frame { position: absolute; inset: 48px 56px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: zoom-in; }
+.cab-lightbox .frame.zoomed { overflow: auto; cursor: zoom-out; display: block; }
+.cab-lightbox .frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.cab-lightbox .frame.zoomed img { max-width: none; max-height: none; }
+.cab-lightbox .ctl { position: absolute; color: #e3d9c6; background: none; border: 0; font-size: 28px; cursor: pointer; padding: 8px 14px; font-family: var(--font-heading); }
+.cab-lightbox .cap { position: absolute; bottom: 12px; left: 0; right: 0; text-align: center; color: #cdbf9f; font-size: 13px; }
+.cab-actions { position: sticky; bottom: calc(-1 * var(--space-4)); background: var(--color-bg); padding: var(--space-3) 0; margin-bottom: calc(-1 * var(--space-4)); border-top: 1px solid var(--color-divider); }
+@media (max-width: 860px) { .cab-stage { min-height: 200px; } }

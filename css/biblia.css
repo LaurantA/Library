@@ -1,0 +1,33 @@
+/* Biblia — layout classes. Colours, type and components come from classical.css. */
+.bb-page { padding: var(--space-6); }
+@media (max-width: 640px) { .bb-page { padding: var(--space-4); } }
+.bb-sum { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--space-8); padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-divider); }
+@media (max-width: 860px) { .bb-sum { grid-template-columns: 1fr; gap: var(--space-4); } }
+.bb-bar { margin-bottom: var(--space-2); }
+.bb-bl { display: flex; justify-content: space-between; gap: var(--space-2); font-size: 13px; margin-bottom: 3px; }
+.bb-bl span:last-child { color: var(--color-neutral-700); white-space: nowrap; }
+.bb-track { height: 6px; background: var(--color-divider); border-radius: 3px; overflow: hidden; }
+.bb-track > i { display: block; height: 100%; background: var(--color-accent); }
+.bb-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--color-neutral-700); margin: var(--space-4) 0 0; align-items: center; }
+.bb-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+.bb-sw { display: inline-block; width: 14px; height: 10px; border-radius: 2px; border: 1.5px solid; }
+.bb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-2); }
+.bb-tile { position: relative; border: 1.5px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-2) var(--space-2) 6px; cursor: pointer; background: transparent; }
+.bb-tile:hover { box-shadow: var(--shadow-md); }
+.bb-l0 { border-color: var(--color-divider); }
+.bb-l1 { border-color: var(--color-accent-400); background: color-mix(in srgb, var(--color-accent) 6%, transparent); }
+.bb-l2 { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 14%, transparent); }
+.bb-l3 { border-color: var(--color-accent-700); background: color-mix(in srgb, var(--color-accent) 26%, transparent); }
+.bb-tn { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17px; line-height: 1.15; }
+.bb-te { font-size: 11.5px; color: var(--color-neutral-700); }
+.bb-dots { display: flex; gap: 3px; margin-top: 5px; }
+.bb-dot { display: inline-block; font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; padding: 0 3px; border-radius: 2px; border: 1px solid var(--color-accent); color: var(--color-accent-700); line-height: 14px; }
+.bb-dot.s0 { border-color: var(--color-divider); color: var(--color-neutral-500); }
+.bb-dot.s1 { border-style: dashed; }
+.bb-dot.s2 { background: var(--color-accent); color: var(--color-bg); }
+.bb-mini { height: 3px; background: var(--color-divider); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+.bb-mini > i { display: block; height: 100%; background: var(--color-accent-700); }
+.bb-flag { position: absolute; top: 4px; right: 6px; font-weight: 700; color: #a33; font-size: 13px; }
+.bb-lrow { display: flex; align-items: center; gap: var(--space-3); padding: 4px 0; flex-wrap: wrap; }
+.bb-ln { width: 92px; font-size: 14px; }
+.bb-issue { display: flex; align-items: center; gap: var(--space-2); font-size: 14px; padding: 3px 0; }

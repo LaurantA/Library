@@ -1,0 +1,38 @@
+/* Atlas — layout classes. Colours, type and components come from classical.css. */
+.at-body { display: grid; grid-template-columns: minmax(0, 1fr) 390px; height: calc(100vh - 120px); min-height: 520px; }
+.at-map { position: relative; border-right: 1px solid var(--color-divider); }
+.at-map .leaflet-container { position: absolute; inset: 0; background: var(--color-surface); font-family: var(--font-body); }
+.at-map.adding .leaflet-container { cursor: crosshair; }
+.at-panel { overflow-y: auto; padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-4); }
+@media (max-width: 900px) {
+  .at-body { grid-template-columns: 1fr; grid-template-rows: 58vh auto; height: auto; }
+  .at-map { border-right: 0; border-bottom: 1px solid var(--color-divider); }
+  .at-panel { overflow: visible; }
+}
+.at-box { border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-3); background: transparent; }
+.at-box h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 18px; margin: 0 0 var(--space-2) 0; }
+.at-row { display: flex; align-items: center; gap: var(--space-2); font-size: 14px; padding: 3px 0; }
+.at-row input[type=checkbox] { accent-color: var(--color-accent); }
+.at-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.25); }
+.at-res { max-height: 260px; overflow-y: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-sm); margin-top: 6px; background: var(--color-bg); }
+.at-res div { padding: 6px var(--space-2); cursor: pointer; font-size: 14px; border-bottom: 1px solid var(--color-divider); }
+.at-res div:last-child { border-bottom: 0; }
+.at-res div:hover { background: var(--color-accent-100); }
+.at-res small { color: var(--color-neutral-700); }
+.at-kicker { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); }
+.at-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 26px; line-height: 1.15; margin: 2px 0 4px 0; }
+.at-sub { font-style: italic; color: var(--color-neutral-700); font-size: 14px; }
+.at-chron { font-size: 13px; line-height: 1.5; margin: 0; padding: 0; list-style: none; }
+.at-chron li { display: grid; grid-template-columns: 82px 1fr; gap: var(--space-2); padding: 3px 0; border-bottom: 1px dotted var(--color-divider); }
+.at-chron b { font-weight: 600; color: var(--color-accent-700); }
+.at-pieces { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: var(--space-2); }
+.at-piece { cursor: pointer; font-size: 12px; line-height: 1.3; }
+.at-piece .pic { aspect-ratio: 4 / 3; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 3px; }
+.at-piece .pic img { width: 100%; height: 100%; object-fit: cover; }
+.at-piece:hover { color: var(--color-accent-700); }
+.at-icon { background: none; border: 0; }
+.at-ob { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 18px solid #3b2f22; filter: drop-shadow(0 0 1.5px #fff8e8); }
+.at-mine { width: 12px; height: 12px; transform: rotate(45deg); background: var(--color-accent); border: 2px solid #fff8e8; box-shadow: 0 0 2px rgba(0,0,0,0.5); }
+.at-cab { min-width: 18px; height: 18px; padding: 0 4px; border-radius: 3px; background: #3b2f22; color: #f3e8cf; font: 600 11px/18px var(--font-body); text-align: center; border: 1.5px solid #e3c98a; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+.at-slider { width: 100%; accent-color: var(--color-accent); }
+.leaflet-tooltip.at-tip { font-family: var(--font-body); font-size: 12px; padding: 3px 7px; border-radius: 3px; }
